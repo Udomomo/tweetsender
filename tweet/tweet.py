@@ -5,21 +5,19 @@ from requests_oauthlib import OAuth1Session
 from dotenv import load_dotenv, set_key
 from subprocess import call
 
-def config():
+def config(dotenv_path = join(dirname(__file__), '.env')):
     CK = input("CONSUMER_KEY: ")
     CS = getpass("CONSUMER_SECRET: ")
     AT = input("ACCESS_TOKEN: ")
     AS = getpass("ACCESS_TOKEN_SECRET: ")
 
-    dotenv_path = join(dirname(__file__), '.env')
     set_key(dotenv_path, "TWITTER_CK", CK)
     set_key(dotenv_path, "TWITTER_CS", CS)
     set_key(dotenv_path, "TWITTER_AT", AT)
     set_key(dotenv_path, "TWITTER_AS", AS)
     print("API keys has been set.")
 
-def tweet():
-    dotenv_path = join(dirname(__file__), '.env')
+def tweet(dotenv_path = join(dirname(__file__), '.env')):
     load_dotenv(dotenv_path)
 
     TWEET_EDITOR = os.getenv('TWEET_EDITOR','vim') 
