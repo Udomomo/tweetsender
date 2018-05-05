@@ -10,7 +10,7 @@ def tweet():
     load_dotenv(dotenv_path)
 
     TWEET_EDITOR = os.getenv('TWEET_EDITOR','vim') 
-    initial_message = ["\n", "# Write your tweet above.\n", "# Lines starting with '#' will be ignored.\n"]
+    initial_message = ["\n", "# Write your tweet above.\n"]
 
     with tempfile.NamedTemporaryFile(suffix=".tmp") as tf:
         for msg in initial_message:
@@ -29,7 +29,7 @@ def tweet():
                 break
 
     params = {"status": contents}
-    if not params["status"]:
+    if not params["status"] or params["status"] == "\n":
         print("Aborted")
         return
 
@@ -53,11 +53,11 @@ def send_tweet(params):
     req = twitter.post(url, params)
     
     if req.status_code == 200:
-        print("Tweet has successfully sent")
+        print("Tweet has successfully sent.")
     else:
         res = req.json()
         err = parse_error(res)
         print("Error: " + err)
 
 if __name__ == "__main__":
-    print(tweet())
+    tweet()
