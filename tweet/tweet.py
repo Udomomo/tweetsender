@@ -71,4 +71,4 @@ def send_tweet(params):
         print("Error: " + err)
 
 if __name__ == "__main__":
-    tweet()
+    tweet(join(dirname(__file__), 'dev/.env'))

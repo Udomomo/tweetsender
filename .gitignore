@@ -1,5 +1,5 @@
 .DS_STORE
-.env
 .vscode
-/dist
-/tweet.egg-info
+dist/
+tweet.egg-info/
+dev/
