@@ -1,5 +1,6 @@
 .DS_STORE
 .vscode
 dist/
-tweet.egg-info/
+*.egg-info/
 dev/
+build/
