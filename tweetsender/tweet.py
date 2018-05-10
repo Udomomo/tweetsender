@@ -9,6 +9,7 @@ from requests_oauthlib import OAuth1Session
 from cliff.command import Command
 
 class Config(Command):
+    "Config API key"
 
     def take_action(self, parsed_args):
 
@@ -28,6 +29,7 @@ class Config(Command):
         print("API keys has been set.")
 
 class Tweet(Command):
+    "Create and send a new tweet"
 
     def take_action(self, parsed_args):
 
