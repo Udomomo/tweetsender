@@ -3,7 +3,7 @@ import setuptools
 if __name__ == "__main__":
     setuptools.setup(
         name='tweetsender',
-        version='0.0.1',
+        version='1.0.0',
         packages=setuptools.find_packages(),
         entry_points={
             'console_scripts': [
@@ -18,5 +18,8 @@ if __name__ == "__main__":
         install_requires=['requests_oauthlib', 'python-dotenv', 'cliff'],
         author='Udomomo',
         author_email='batzuma@yahoo.co.jp',
-        url='http://udomomo.hatenablog.com/'
+        maintainer='Udomomo',
+        maintainer_email='batzuma@yahoo.co.jp',
+        description='Tweet-Only Twitter CLI',
+        url='https://github.com/Udomomo/tweetsender'
     )
