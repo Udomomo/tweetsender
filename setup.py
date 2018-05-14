@@ -1,9 +1,14 @@
 import setuptools
+from os import path
 
 if __name__ == "__main__":
+
+    def read(fname):
+        return open(path.join(path.dirname(__file__), fname)).read()
+
     setuptools.setup(
-        name='tweetsender',
-        version='1.0.0',
+        name='tweetsenders',
+        version='1.0.2',
         packages=setuptools.find_packages(),
         entry_points={
             'console_scripts': [
@@ -21,5 +26,7 @@ if __name__ == "__main__":
         maintainer='Udomomo',
         maintainer_email='batzuma@yahoo.co.jp',
         description='Tweet-Only Twitter CLI',
+        long_description=read("README.rst"),
+        long_description_content_type='text/x-rst',
         url='https://github.com/Udomomo/tweetsender'
     )
