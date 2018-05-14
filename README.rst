@@ -4,7 +4,7 @@ tweetsender
 .. image:: https://img.shields.io/github/license/Udomomo/tweetsender.svg
    :target: https://github.com/Udomomo/tweetsender/blob/master/LICENSE.txt
   
-.. image:: http://img.shields.io/pypi/v/tweetsender.svg?style=flat-square
+.. image:: http://img.shields.io/pypi/v/tweetsender.svg
    :target: https://pypi.python.org/pypi/tweetsender
 
 tweet-only Twitter CLI
