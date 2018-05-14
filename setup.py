@@ -7,8 +7,8 @@ if __name__ == "__main__":
         return open(path.join(path.dirname(__file__), fname)).read()
 
     setuptools.setup(
-        name='tweetsenders',
-        version='1.0.2',
+        name='tweetsender',
+        version='1.0.0',
         packages=setuptools.find_packages(),
         entry_points={
             'console_scripts': [
@@ -21,9 +21,9 @@ if __name__ == "__main__":
             ]
         },
         install_requires=['requests_oauthlib', 'python-dotenv', 'cliff'],
-        author='Udomomo',
+        author='Naoya Otani',
         author_email='batzuma@yahoo.co.jp',
-        maintainer='Udomomo',
+        maintainer='Naoya Otani',
         maintainer_email='batzuma@yahoo.co.jp',
         description='Tweet-Only Twitter CLI',
         long_description=read("README.rst"),
